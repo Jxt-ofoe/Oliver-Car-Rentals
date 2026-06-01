@@ -1,0 +1,3143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Car Rentals | VIP Car Hire & Rental Agency in Accra, Ghana</title>
+  <meta name="description" content="Premium car rentals in Accra, Ghana. Providing luxury 4x4 SUVs, saloon sedans, and passenger buses for individuals and corporate clients. Over 19 years of reliable 24/7 service.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4AF37'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z'/%3E%3C/svg%3E">
+  
+  <!-- Modern Typography (Outfit for Headers, Inter for Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <style>
+    /* -------------------------------------------------------------
+       1. DESIGN SYSTEM & ROOT VARIABLES
+       ------------------------------------------------------------- */
+    :root {
+      --bg-primary: #121212;      /* Jet Black */
+      --bg-secondary: #1A1A1A;    /* Deep Charcoal */
+      --bg-card: #1F1F1F;         /* Lighter Charcoal for cards */
+      --text-primary: #FFFFFF;    /* Pure White */
+      --text-secondary: #E0E0E0;  /* Platinum/Silver */
+      --text-muted: #888888;
+      --accent-gold: #D4AF37;     /* Bold Gold */
+      --accent-gold-rgb: 212, 175, 55;
+      --whatsapp-green: #25D366;
+      --whatsapp-green-hover: #128C7E;
+      --transition-speed: 0.35s;
+      --border-radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-primary);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg-secondary);
+      border: 2px solid var(--bg-primary);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-gold);
+    }
+
+    /* -------------------------------------------------------------
+       2. TYPOGRAPHY & UTILITY CLASSES
+       ------------------------------------------------------------- */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 12px;
+      position: relative;
+      padding-bottom: 16px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent-gold);
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(var(--accent-gold-rgb), 0.6);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 50px;
+      font-size: 1.1rem;
+    }
+
+    /* Buttons & CTAs */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid transparent;
+    }
+
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: var(--bg-primary);
+      box-shadow: 0 4px 15px rgba(var(--accent-gold-rgb), 0.2);
+    }
+
+    .btn-gold:hover {
+      background-color: transparent;
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 20px rgba(var(--accent-gold-rgb), 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-secondary);
+      border: 2px solid rgba(224, 224, 224, 0.2);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      box-shadow: 0 0 15px rgba(var(--accent-gold-rgb), 0.3);
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(var(--accent-gold-rgb), 0.1);
+      border: 1px solid rgba(var(--accent-gold-rgb), 0.3);
+      color: var(--accent-gold);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    /* -------------------------------------------------------------
+       3. NAVIGATION HEADER
+       ------------------------------------------------------------- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(18, 18, 18, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      background: rgba(18, 18, 18, 0.95);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent-gold), #b38f2d);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(var(--accent-gold-rgb), 0.4);
+    }
+
+    .logo-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--bg-primary);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.1;
+    }
+
+    .logo-tag {
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-gold);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-phone:hover {
+      color: var(--accent-gold);
+    }
+
+    .nav-phone svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent-gold);
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-primary);
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* -------------------------------------------------------------
+       4. HERO SECTION
+       ------------------------------------------------------------- */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(18, 18, 18, 0.75), var(--bg-primary)), 
+                        url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=1920');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    /* Soft glowing radial background */
+    .hero-glow {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+      z-index: -1;
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--accent-gold) 0%, #FFF5D1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      max-width: 600px;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    /* Trust indicators directly in Hero */
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 30px;
+    }
+
+    .trust-stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .trust-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+    }
+
+    .google-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 16px;
+      border-radius: 4px;
+    }
+
+    .google-badge svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .rating-stars {
+      color: var(--accent-gold);
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+
+    .rating-score {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* -------------------------------------------------------------
+       5. ABOUT SECTION
+       ------------------------------------------------------------- */
+    #about {
+      padding: 120px 0;
+      background-color: var(--bg-secondary);
+      position: relative;
+    }
+
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-info-panel {
+      position: relative;
+    }
+
+    .about-text {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .about-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .about-item-icon {
+      background: rgba(var(--accent-gold-rgb), 0.1);
+      border-radius: 50%;
+      min-width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(var(--accent-gold-rgb), 0.2);
+    }
+
+    .about-item-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--accent-gold);
+    }
+
+    .about-item-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .about-item-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .about-visual-panel {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      aspect-ratio: 4 / 3;
+    }
+
+    .about-img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, var(--bg-secondary), transparent);
+    }
+
+    .about-visual-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-speed) ease;
+    }
+
+    .about-visual-panel:hover img {
+      transform: scale(1.05);
+    }
+
+    /* -------------------------------------------------------------
+       6. FLEET / VEHICLES SECTION
+       ------------------------------------------------------------- */
+    #fleet {
+      padding: 120px 0;
+      background-color: var(--bg-primary);
+    }
+
+    /* Filter Tabs Styling */
+    .fleet-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 50px;
+    }
+
+    .fleet-tab {
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      outline: none;
+    }
+
+    .fleet-tab:hover, .fleet-tab.active {
+      background-color: var(--accent-gold);
+      color: var(--bg-primary);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 15px rgba(var(--accent-gold-rgb), 0.4);
+    }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      transition: all 0.5s ease;
+    }
+
+    .fleet-card {
+      background-color: var(--bg-card);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all var(--transition-speed) ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .fleet-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(var(--accent-gold-rgb), 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .fleet-img-container {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background-color: #161616;
+    }
+
+    .fleet-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .fleet-img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+      transition: transform var(--transition-speed) ease;
+    }
+
+    .fleet-card:hover .fleet-img-placeholder img {
+      transform: scale(1.05);
+      filter: brightness(0.9);
+    }
+
+    .fleet-img-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(31, 31, 31, 1), rgba(31, 31, 31, 0));
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .fleet-category-badge {
+      background: rgba(var(--accent-gold-rgb), 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .fleet-card-body {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fleet-title {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .fleet-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .fleet-specs {
+      list-style: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 16px 0;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .fleet-spec-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .fleet-spec-item svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--accent-gold);
+    }
+
+    .fleet-cta {
+      width: 100%;
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 0.95rem;
+      border-radius: 6px;
+    }
+
+    .fleet-note {
+      text-align: center;
+      background-color: var(--bg-card);
+      border: 1px dashed rgba(var(--accent-gold-rgb), 0.25);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      margin-top: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .fleet-note p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .fleet-note svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent-gold);
+    }
+
+    .fleet-note a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 700;
+      transition: text-shadow 0.3s ease;
+    }
+
+    .fleet-note a:hover {
+      text-shadow: 0 0 10px rgba(var(--accent-gold-rgb), 0.4);
+    }
+
+    /* -------------------------------------------------------------
+       7. WHY CHOOSE US SECTION
+       ------------------------------------------------------------- */
+    #why-choose-us {
+      padding: 120px 0;
+      background-color: var(--bg-secondary);
+      position: relative;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .why-card {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      padding: 36px 28px;
+      border-radius: var(--border-radius);
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 0;
+      background-color: var(--accent-gold);
+      transition: height 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(var(--accent-gold-rgb), 0.15);
+    }
+
+    .why-card:hover::before {
+      height: 100%;
+    }
+
+    .why-icon {
+      width: 54px;
+      height: 54px;
+      background: rgba(var(--accent-gold-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-gold-rgb), 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .why-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--accent-gold);
+    }
+
+    .why-title {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .why-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* -------------------------------------------------------------
+       8. TESTIMONIALS SECTION
+       ------------------------------------------------------------- */
+    #testimonials {
+      padding: 120px 0;
+      background-color: var(--bg-primary);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+
+    .testimonial-card {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 40px;
+      border-radius: var(--border-radius);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .testimonial-quotes {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 5rem;
+      line-height: 0;
+      color: rgba(var(--accent-gold-rgb), 0.05);
+      font-family: Georgia, serif;
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 30px;
+      flex-grow: 1;
+    }
+
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 20px;
+    }
+
+    .reviewer-avatar {
+      width: 46px;
+      height: 46px;
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .reviewer-details h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .reviewer-details p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Trust Ribbon ("As seen on") */
+    .trust-ribbon {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 60px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .trust-ribbon-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .badges-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .trust-badge-card {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      background-color: var(--bg-secondary);
+      padding: 10px 24px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all var(--transition-speed) ease;
+      cursor: default;
+    }
+
+    .trust-badge-card:hover {
+      color: var(--text-primary);
+      border-color: rgba(var(--accent-gold-rgb), 0.25);
+      box-shadow: 0 0 15px rgba(var(--accent-gold-rgb), 0.1);
+    }
+
+    /* -------------------------------------------------------------
+       9. CONTACT & HOURS SECTION
+       ------------------------------------------------------------- */
+    #contact {
+      padding: 120px 0;
+      background-color: var(--bg-secondary);
+      position: relative;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 50px;
+    }
+
+    /* Contact Info Panel (Left) */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .info-card {
+      display: flex;
+      gap: 20px;
+    }
+
+    .info-card-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(var(--accent-gold-rgb), 0.06);
+      border: 1px solid rgba(var(--accent-gold-rgb), 0.15);
+      border-radius: var(--border-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-card-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent-gold);
+    }
+
+    .info-card-body h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .info-card-body p, .info-card-body a {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .info-card-body a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Status Indicator for Hours */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    .status-open {
+      background: rgba(37, 211, 102, 0.1);
+      color: var(--whatsapp-green);
+      border: 1px solid rgba(37, 211, 102, 0.2);
+    }
+
+    .status-closed {
+      background: rgba(255, 59, 48, 0.1);
+      color: #FF3B30;
+      border: 1px solid rgba(255, 59, 48, 0.2);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 250px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(0.8) invert(0.9) contrast(1.2);
+    }
+
+    /* Inquiry Form Panel (Right) */
+    .form-card {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-title {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .form-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group-full {
+      grid-column: span 2;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-control {
+      background-color: rgba(18, 18, 18, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-primary);
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-gold);
+      background-color: rgba(18, 18, 18, 0.8);
+      box-shadow: 0 0 10px rgba(var(--accent-gold-rgb), 0.25);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-submit-btn {
+      grid-column: span 2;
+      width: 100%;
+      margin-top: 10px;
+      background-color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    /* -------------------------------------------------------------
+       10. FOOTER
+       ------------------------------------------------------------- */
+    footer {
+      background-color: #0c0c0c;
+      padding: 80px 0 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 14px;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      background-color: var(--accent-gold);
+      color: var(--bg-primary);
+      border-color: var(--accent-gold);
+      transform: translateY(-2px);
+    }
+
+    .social-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .footer-link a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link a:hover {
+      color: var(--accent-gold);
+    }
+
+    .footer-contact-details {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--accent-gold);
+      margin-top: 3px;
+    }
+
+    .footer-contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--accent-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-whatsapp-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--whatsapp-green);
+      text-decoration: none;
+      font-weight: 600;
+      transition: text-shadow 0.3s ease;
+    }
+
+    .footer-whatsapp-link:hover {
+      text-shadow: 0 0 10px rgba(37, 211, 102, 0.3);
+    }
+
+    .footer-whatsapp-link svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* -------------------------------------------------------------
+       11. FLOATING ELEMENTS
+       ------------------------------------------------------------- */
+    .floating-wa-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 56px;
+      height: 56px;
+      background-color: var(--whatsapp-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 20px rgba(37, 211, 102, 0.35);
+      cursor: pointer;
+      z-index: 999;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-wa-btn::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 50%;
+      border: 1px solid var(--whatsapp-green);
+      opacity: 0;
+      animation: pulse-ring 2s infinite;
+      pointer-events: none;
+    }
+
+    .floating-wa-btn:hover {
+      background-color: var(--whatsapp-green-hover);
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    }
+
+    .floating-wa-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--text-primary);
+    }
+
+    .wa-tooltip {
+      position: absolute;
+      right: 70px;
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .floating-wa-btn:hover .wa-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       12. RESPONSIVE MEDIA QUERIES
+       ------------------------------------------------------------- */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .about-visual-panel {
+        order: -1;
+        max-height: 400px;
+      }
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--bg-primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: left 0.4s ease;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .nav-cta-wrapper {
+        display: none; /* Collapsed under mobile */
+      }
+
+      .nav-links .btn {
+        margin-top: 20px;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-tagline {
+        font-size: 1.1rem;
+      }
+      .fleet-grid {
+        grid-template-columns: 1fr;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .footer-brand {
+        align-items: center;
+        text-align: center;
+      }
+      .footer-nav {
+        align-items: center;
+        text-align: center;
+      }
+      .footer-contact-details {
+        align-items: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+      }
+      .hero-actions .btn {
+        width: 100%;
+      }
+      .hero-trust {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+      .form-submit-btn, .form-group-full {
+        grid-column: span 1;
+      }
+      .floating-wa-btn {
+        bottom: 20px;
+        right: 20px;
+      }
+      .wa-tooltip {
+        display: none; /* Hide tooltips on small mobiles */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- -------------------------------------------------------------
+       NAVIGATION HEADER
+       ------------------------------------------------------------- -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <div class="logo-icon">
+          <!-- Steering wheel / Car vector representation -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Oliver</span>
+          <span class="logo-tag">Car Rentals</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link" onclick="closeMenu()">Home</a>
+        <a href="#about" class="nav-link" onclick="closeMenu()">About</a>
+        <a href="#fleet" class="nav-link" onclick="closeMenu()">Our Fleet</a>
+        <a href="#why-choose-us" class="nav-link" onclick="closeMenu()">Why Us</a>
+        <a href="#testimonials" class="nav-link" onclick="closeMenu()">Reviews</a>
+        <a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a>
+        <a href="javascript:void(0)" class="btn btn-gold btn-header-cta" onclick="handleGeneralWhatsAppInquiry('header'); closeMenu()">Book VIP</a>
+      </nav>
+
+      <!-- CTA Container (Call + Action) -->
+      <div class="nav-cta-wrapper">
+        <a href="tel:+233243208436" class="nav-phone">
+          <svg viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.01-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          +233 24 320 8436
+        </a>
+        <a href="javascript:void(0)" class="btn btn-gold" onclick="handleGeneralWhatsAppInquiry('header')">Book VIP</a>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- -------------------------------------------------------------
+       HERO SECTION
+       ------------------------------------------------------------- -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">19+ Years of Excellence</div>
+        <h1 class="hero-title">Experience <span>Accra</span> on Your Own Terms</h1>
+        <p class="hero-tagline">Reliable, premium car rentals for individuals and businesses. Flawless vehicles and 24/7 client coordination.</p>
+        
+        <div class="hero-actions">
+          <a href="javascript:void(0)" class="btn btn-gold" onclick="handleGeneralWhatsAppInquiry('hero_vip')">
+            Book VIP on WhatsApp
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.012 2c-5.506 0-9.975 4.47-9.975 9.979 0 1.761.459 3.479 1.332 5.002L2 22l5.176-1.361c1.478.809 3.136 1.233 4.828 1.233 5.506 0 9.976-4.47 9.976-9.98S17.518 2 12.012 2zm6.277 14.193c-.273.767-1.361 1.4-1.879 1.488-.479.083-.996.143-3.14-.736-2.738-1.124-4.509-3.928-4.647-4.11-.137-.183-1.11-1.48-1.11-2.822 0-1.343.702-2.003.951-2.274.25-.272.546-.34.729-.34.182 0 .365.002.523.01.166.008.389-.063.608.463.226.541.776 1.895.843 2.03.067.137.112.296.022.476-.09.18-.135.295-.27.452-.136.157-.285.352-.408.472-.135.132-.277.276-.12.547.158.271.7 1.15 1.502 1.865.986.88 1.815 1.152 2.072 1.288.257.135.408.113.56-.062.152-.176.654-.763.829-1.022.176-.259.351-.215.592-.125.241.09 1.528.72 1.792.852.264.133.438.199.503.311.066.113.066.654-.207 1.421z"/>
+            </svg>
+          </a>
+          <a href="#fleet" class="btn btn-outline">Explore Our Fleet</a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-stat">
+            <span class="trust-number">19+</span>
+            <span class="trust-text">Years of<br>Service</span>
+          </div>
+          <div class="google-badge">
+            <svg viewBox="0 0 24 24" fill="#4285F4">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+            </svg>
+            <div>
+              <div class="rating-stars">★★★★★</div>
+              <span class="rating-score">5.0 ★ Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
+       ABOUT SECTION
+       ------------------------------------------------------------- -->
+  <section id="about">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-info-panel">
+          <span class="badge">Who We Are</span>
+          <h2 style="font-size: 2.3rem; margin-bottom: 24px;">Accra's Trusted Mobility Partner</h2>
+          <p class="about-text">
+            Oliver Car Rentals has served companies and individuals in Accra for over 19 years. We provide reliable, well‑maintained vehicles for any occasion – from daily commutes to corporate travel and group transport. Premium service, 24/7 availability.
+          </p>
+          
+          <div class="about-highlights">
+            <div class="about-item">
+              <div class="about-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              </div>
+              <div>
+                <h3 class="about-item-title">19+ Years Experience</h3>
+                <p class="about-item-desc">A legacy of reliable and seamless mobility across Greater Accra.</p>
+              </div>
+            </div>
+            
+            <div class="about-item">
+              <div class="about-item-icon">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3L11 12.72V7h1.5v4.93l3.7 2.21-.71.93.01.23z"/></svg>
+              </div>
+              <div>
+                <h3 class="about-item-title">24/7 Availability</h3>
+                <p class="about-item-desc">Continuous client coordination and support from Mon to Sat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-panel">
+          <div class="about-img-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=800" alt="Executive fleet in Accra at night">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
+       FLEET / VEHICLES SECTION
+       ------------------------------------------------------------- -->
+  <section id="fleet">
+    <div class="container">
+      <h2 class="section-title">Our Premium Fleet</h2>
+      <p class="section-subtitle">Meticulously maintained vehicles tailored to give you maximum safety, prestige, and executive comfort in Accra.</p>
+
+      <!-- Category Filter Tabs -->
+      <div class="fleet-tabs">
+        <button class="fleet-tab active" data-filter="all">All Vehicles</button>
+        <button class="fleet-tab" data-filter="suv">Luxury SUVs & 4x4s</button>
+        <button class="fleet-tab" data-filter="sedan">Executive Sedans</button>
+        <button class="fleet-tab" data-filter="bus">Vans & Buses</button>
+        <button class="fleet-tab" data-filter="economy">Economy & Taxis</button>
+      </div>
+
+      <div class="fleet-grid" id="fleetGrid">
+        
+        <!-- SUV: Toyota Land Cruiser V8 -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://i.pinimg.com/1200x/56/8f/89/568f89ee80c33c9f460d88d7ca48a6d5.jpg" alt="Toyota Land Cruiser V8">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Toyota Land Cruiser V8</h3>
+            <p class="fleet-desc">Accra's ultimate status SUV. Absolute VIP presence, armored-level robust build, and premium double-wishbone luxury ride.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                7 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                V8 Turbo Diesel
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Elite Luxury AC
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Toyota Land Cruiser V8')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SUV: Toyota Land Cruiser Prado 2018 -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=800" alt="Toyota Land Cruiser Prado">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Toyota LC Prado 2018</h3>
+            <p class="fleet-desc">Sleek and versatile luxury 4x4. Excellent performance on rugged regional terrain, high-end seating, and powerful air climate controls.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                7 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Turbo Diesel
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Dual Climate Zone
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Toyota Land Cruiser Prado 2018')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SUV: Range Rover 2020 -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1606016159991-dfe4f974be5c?auto=format&fit=crop&q=80&w=800" alt="Range Rover 2020">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Range Rover 2020</h3>
+            <p class="fleet-desc">The pinnacle of British luxury motoring. Dynamic air suspension, panoramic VIP cabin, and imposing aesthetic perfect for high-profile arrivals.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Supercharged Engine
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Active Air Suspension
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Range Rover 2020')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SUV: Cadillac Escalade -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=800" alt="Cadillac Escalade">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Cadillac Escalade</h3>
+            <p class="fleet-desc">American presidential luxury. Huge cabin presence, hand-stitched leather lounge seating, and state-of-the-art rear passenger infotainment.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                7 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Premium V8 Petrol
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Surround Premium Audio
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Cadillac Escalade')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SUV: Toyota Fortuner -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=800" alt="Toyota Fortuner">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Toyota Fortuner</h3>
+            <p class="fleet-desc">Highly dependable double-duty SUV. Strong off-road capability matched with clean urban aesthetics, perfect for corporate operations.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                7 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                4x4 Capability
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Heavy Duty AC
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Toyota Fortuner')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SUV: Honda CR-V -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800" alt="Honda CR-V">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Honda CR-V</h3>
+            <p class="fleet-desc">Refined, comfortable crossover. High fuel efficiency, smooth CVT drive, and sleek layout perfect for self-drive city navigation.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                1.5L Turbo Engine
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Active Safety Sensing
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Honda CR-V')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SUV: Hyundai Creta -->
+        <div class="fleet-card" data-category="suv">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?auto=format&fit=crop&q=80&w=800" alt="Hyundai Creta">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">SUV / 4x4</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Hyundai Creta</h3>
+            <p class="fleet-desc">Smart, fuel-efficient compact SUV. Easy to park in tight Accra spaces, high visual clearance, and very responsive steering.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Highly Fuel Efficient
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Panoramic Sunroof
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Hyundai Creta')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SEDAN: Mercedes-Benz E-Class -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800" alt="Mercedes-Benz E-Class">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Executive Sedan</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Mercedes-Benz E-Class</h3>
+            <p class="fleet-desc">The absolute benchmark of executive corporate travel. Sumptuous rear leather, ambient mood lighting, and flawless VIP luxury styling.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Twin-Turbo Power
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                VIP Multi-Climate Zones
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Mercedes-Benz E-Class')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SEDAN: Volkswagen Passat -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1606016159991-dfe4f974be5c?auto=format&fit=crop&q=80&w=800" alt="Volkswagen Passat">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Executive Sedan</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Volkswagen Passat</h3>
+            <p class="fleet-desc">Elegant German engineering. Highly ergonomic cockpit, superb highway stability, and quiet cabin insulation perfect for business meetings.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                TSI Turbo Engine
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Rear Climate Venting
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Volkswagen Passat')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SEDAN: Hyundai Sonata 2020 -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800" alt="Hyundai Sonata 2020">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Executive Sedan</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Hyundai Sonata 2020</h3>
+            <p class="fleet-desc">Futuristic fastback styling. Striking LED light signatures, modern touch displays, and smooth, eco-friendly highway running.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Smart Drive Select
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Surround Monitor
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Hyundai Sonata 2020')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- SEDAN: Honda Accord -->
+        <div class="fleet-card" data-category="sedan">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=800" alt="Honda Accord">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Executive Sedan</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Honda Accord</h3>
+            <p class="fleet-desc">Sporty yet executive sedan. Spacious rear legroom matching larger luxury classes, with top-tier active driver safety systems.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                2.0L Turbo Power
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Leather Lounge Trim
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Honda Accord')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- BUS: Toyota Coaster -->
+        <div class="fleet-card" data-category="bus">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800" alt="Toyota Coaster Bus">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Group / Coach</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Toyota Coaster</h3>
+            <p class="fleet-desc">Sizable high-capacity VIP shuttle coach. Powerful under-floor air conditioning, plush high-back passenger seats, and broad luggage bays.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                30 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Dedicated Driver
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Heavy Duty AC
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Group Retreat Ready
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Toyota Coaster')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- BUS: Toyota HiAce 2026 -->
+        <div class="fleet-card" data-category="bus">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800" alt="Toyota HiAce 2026">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Van / Bus</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Toyota HiAce 2026</h3>
+            <p class="fleet-desc">The absolute latest in group travel luxury. Sleek high-roof van layout, dual climate blowers, and individual reclining business seats.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                15 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                USB Charging Ports
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Automatic
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Eco-Diesel Engine
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Toyota HiAce 2026')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- ECONOMY: Hyundai Taxi 2018 -->
+        <div class="fleet-card" data-category="economy">
+          <div class="fleet-img-container">
+            <div class="fleet-img-placeholder">
+              <img src="https://images.unsplash.com/photo-1492664738988-2be3d18e7e00?auto=format&fit=crop&q=80&w=800" alt="Hyundai Taxi 2018">
+              <div class="fleet-img-overlay">
+                <span class="fleet-category-badge">Economy / Taxi</span>
+              </div>
+            </div>
+          </div>
+          <div class="fleet-card-body">
+            <h3 class="fleet-title">Hyundai Taxi 2018</h3>
+            <p class="fleet-desc">Ultra-affordable Accra city running. Reliable, simple taxi setup, highly fuel-efficient, and ideal for standard daily running.</p>
+            <ul class="fleet-specs">
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                5 Seats
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Fuel Efficient
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Manual/Auto
+              </li>
+              <li class="fleet-spec-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Standard Air Climate
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('Hyundai Taxi 2018')">Inquire on WhatsApp</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fleet Custom Note -->
+      <div class="fleet-note">
+        <p>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          Need a specific vehicle model not shown above? <strong>Any car type you need is available!</strong> 
+          <a href="javascript:void(0)" onclick="handleGeneralWhatsAppInquiry('custom_fleet_request')">Just ask us on WhatsApp</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
+       WHY CHOOSE US SECTION
+       ------------------------------------------------------------- -->
+  <section id="why-choose-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Oliver Car Rentals</h2>
+      <p class="section-subtitle">Accra's premier mobility provider. Over two decades of premium reliability and absolute customer satisfaction.</p>
+
+      <div class="why-grid">
+        <!-- Benefit 1 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3L11 12.72V7h1.5v4.93l3.7 2.21-.71.93.01.23z"/></svg>
+          </div>
+          <h3 class="why-title">24/7 Availability</h3>
+          <p class="why-desc">We operate 24 hours a day, Monday to Saturday. Count on us for emergency calls and late-night pickups.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          </div>
+          <h3 class="why-title">19+ Years of Trust</h3>
+          <p class="why-desc">Providing flawless logistical backup for individuals, expats, and major companies in Ghana for 19+ years.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-2.01-1.39-3.59-3.71-4.13V3h-3v2.01c-2.2.49-3.99 1.89-3.99 4.24 0 2.53 2.1 3.8 5.3 4.58 2.47.61 3.1 1.38 3.1 2.39 0 1.06-.98 1.93-2.72 1.93-2.12 0-2.85-.97-2.97-2.2H5.54c.15 2.29 1.69 3.8 4.46 4.37V21h3v-2.01c2.4-.49 4-1.87 4-4.24 0-2.93-2.33-3.86-4.7-4.45z"/></svg>
+          </div>
+          <h3 class="why-title">Competitive Rates</h3>
+          <p class="why-desc">Premium car rental luxury doesn't have to break the bank. We offer highly competitive, transparent rates.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3 class="why-title">Individual & Corporate</h3>
+          <p class="why-desc">Custom rental options. From short weekend getaways to long-term monthly corporate staff contracts.</p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </div>
+          <h3 class="why-title">Instant WhatsApp Booking</h3>
+          <p class="why-desc">Zero tedious paperwork. Select your vehicle, state your duration, and reserve your ride in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
+       TESTIMONIALS SECTION
+       ------------------------------------------------------------- -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Reviews From Our Customers</h2>
+      <p class="section-subtitle">We maintain a 5.0-star reputation. See what our valued local and international clients say about us.</p>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-quotes">“</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"You get all the cars u need to rent here"</p>
+          </div>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">DL</div>
+            <div class="reviewer-details">
+              <h4>DJ Lloyd</h4>
+              <p>Verified Customer | 5/5 Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-quotes">“</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">"I rented a car from Oliver Car Rentals and their services are amazing. I wish to recommend to individuals and companies to patronize them and you shall not regret"</p>
+          </div>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">GB</div>
+            <div class="reviewer-details">
+              <h4>Ghana Business Directory Reviewer</h4>
+              <p>Verified Directory Contributor | 5/5 Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Ribbon ("As seen on") -->
+      <div class="trust-ribbon">
+        <h3 class="trust-ribbon-title">As Seen On & Verified By</h3>
+        <div class="badges-container">
+          <div class="trust-badge-card">GhanaYello</div>
+          <div class="trust-badge-card">SeekGhana</div>
+          <div class="trust-badge-card">Africa Listings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
+       CONTACT & BOOKING SECTION
+       ------------------------------------------------------------- -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        
+        <!-- Left Column: Details & Map -->
+        <div class="contact-info">
+          <div>
+            <span class="badge">Get in Touch</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 20px;">Ready to Book Your VIP Ride?</h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">Visit our office, give us a phone call, or immediately start your WhatsApp coordinate inquiry. Our dispatch operators are standing by.</p>
+          </div>
+
+          <!-- Info Items -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="info-card-body">
+              <h3>Office Address</h3>
+              <p>Sir Charles Quist St & Angola Ave, Accra, Ghana</p>
+              <a href="https://maps.google.com/?q=Sir+Charles+Quist+St+%26+Angola+Ave,+Accra,+Ghana" target="_blank" style="color: var(--accent-gold); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">
+                Open in Google Maps
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9 9-1.41-1.41 9-9H14V3zm-2 11l-4 4H3v-9h9v2H5v5h5v-2h2z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.14-3.76-6.59-6.59l2.2-2.2c.28-.27.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+            </div>
+            <div class="info-card-body">
+              <h3>Voice Calls & Telephony</h3>
+              <a href="tel:+233243208436" style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">+233 24 320 8436</a>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Primary CTAs are via WhatsApp, but you can call our voice desk anytime.</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.3L11 12.72V7h1.5v4.93l3.7 2.21-.71.93.01.23z"/></svg>
+            </div>
+            <div class="info-card-body">
+              <h3>Business Hours</h3>
+              <p>Monday to Saturday: <strong>Open 24 Hours</strong></p>
+              <p>Sunday: <strong>Closed</strong></p>
+              
+              <div id="liveStatusContainer">
+                <!-- Status loaded dynamically by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Sir%20Charles%20Quist%20St%20%26%20Angola%20Ave%20Accra%20Ghana&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Right Column: WhatsApp Form -->
+        <div class="form-card" id="bookingFormContainer">
+          <h3 class="form-title">Send a Booking Inquiry</h3>
+          <p class="form-subtitle">Fill in your reservation details. This form instantly constructs your booking template and redirects you to WhatsApp.</p>
+          
+          <form class="contact-form" id="whatsappBookingForm">
+            <div class="form-group">
+              <label for="clientName" class="form-label">Full Name</label>
+              <input type="text" id="clientName" class="form-control" placeholder="e.g. John Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="clientPhone" class="form-label">Phone Number</label>
+              <input type="tel" id="clientPhone" class="form-control" placeholder="e.g. +233 24 000 0000" required>
+            </div>
+
+            <div class="form-group">
+              <label for="pickupDate" class="form-label">Pickup Date & Time</label>
+              <input type="datetime-local" id="pickupDate" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="returnDate" class="form-label">Return Date & Time</label>
+              <input type="datetime-local" id="returnDate" class="form-control" required>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="vehicleType" class="form-label">Select Vehicle Model</label>
+              <select id="vehicleType" class="form-control">
+                <optgroup label="Luxury & 4x4 SUVs / Pickups">
+                  <option value="Toyota Land Cruiser LC300">Toyota Land Cruiser LC300</option>
+                  <option value="Toyota Land Cruiser V8">Toyota Land Cruiser V8</option>
+                  <option value="Toyota Land Cruiser Prado 2018">Toyota Land Cruiser Prado 2018</option>
+                  <option value="Mercedes-Benz G-Class (G63 AMG)">Mercedes-Benz G-Class (G63 AMG)</option>
+                  <option value="Range Rover 2020">Range Rover 2020</option>
+                  <option value="Range Rover Velar or Sport">Range Rover Velar or Sport</option>
+                  <option value="Cadillac Escalade">Cadillac Escalade</option>
+                  <option value="Toyota Fortuner">Toyota Fortuner</option>
+                  <option value="Toyota Hilux">Toyota Hilux Pickup</option>
+                  <option value="Mitsubishi L200 Sportero">Mitsubishi L200 Sportero</option>
+                  <option value="Nissan Qashqai">Nissan Qashqai</option>
+                  <option value="Kia Sportage">Kia Sportage</option>
+                  <option value="Toyota RAV4">Toyota RAV4</option>
+                  <option value="Audi Q5">Audi Q5</option>
+                  <option value="Honda CR-V">Honda CR-V</option>
+                  <option value="Hyundai Creta">Hyundai Creta</option>
+                </optgroup>
+                <optgroup label="Executive Sedans">
+                  <option value="Mercedes-Benz E-Class">Mercedes-Benz E-Class</option>
+                  <option value="Volkswagen Passat">Volkswagen Passat</option>
+                  <option value="Hyundai Sonata 2020">Hyundai Sonata 2020</option>
+                  <option value="Honda Accord">Honda Accord</option>
+                  <option value="Toyota Corolla">Toyota Corolla</option>
+                </optgroup>
+                <optgroup label="Buses & Vans">
+                  <option value="Toyota Coaster Bus">Toyota Coaster Bus</option>
+                  <option value="Toyota HiAce 2026 Van">Toyota HiAce 2026 Van</option>
+                </optgroup>
+                <optgroup label="Economy & Taxis">
+                  <option value="Hyundai Taxi 2018">Hyundai Taxi 2018</option>
+                  <option value="Toyota Yaris">Toyota Yaris</option>
+                  <option value="Volkswagen Polo">Volkswagen Polo</option>
+                  <option value="Renault Clio">Renault Clio</option>
+                  <option value="Volkswagen Golf">Volkswagen Golf</option>
+                  <option value="Suzuki S-Presso">Suzuki S-Presso</option>
+                </optgroup>
+                <option value="Other Car / Special Request">Other Car / Special Request</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="clientMessage" class="form-label">Additional Requests (Optional)</label>
+              <textarea id="clientMessage" class="form-control" placeholder="Mention any extra preferences, specific vehicle requests, or destination plans here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold form-submit-btn">
+              Submit Inquiry to WhatsApp
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.012 2c-5.506 0-9.975 4.47-9.975 9.979 0 1.761.459 3.479 1.332 5.002L2 22l5.176-1.361c1.478.809 3.136 1.233 4.828 1.233 5.506 0 9.976-4.47 9.976-9.98S17.518 2 12.012 2zm6.277 14.193c-.273.767-1.361 1.4-1.879 1.488-.479.083-.996.143-3.14-.736-2.738-1.124-4.509-3.928-4.647-4.11-.137-.183-1.11-1.48-1.11-2.822 0-1.343.702-2.003.951-2.274.25-.272.546-.34.729-.34.182 0 .365.002.523.01.166.008.389-.063.608.463.226.541.776 1.895.843 2.03.067.137.112.296.022.476-.09.18-.135.295-.27.452-.136.157-.285.352-.408.472-.135.132-.277.276-.12.547.158.271.7 1.15 1.502 1.865.986.88 1.815 1.152 2.072 1.288.257.135.408.113.56-.062.152-.176.654-.763.829-1.022.176-.259.351-.215.592-.125.241.09 1.528.72 1.792.852.264.133.438.199.503.311.066.113.066.654-.207 1.421z"/>
+              </svg>
+            </button>
+            
+            <button type="button" class="btn btn-outline form-submit-btn" style="margin-top: 5px; border-color: rgba(37, 211, 102, 0.4); color: var(--whatsapp-green);" onclick="handleGeneralWhatsAppInquiry('contact_form_chat')">
+              Chat on WhatsApp Now
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
+       FOOTER
+       ------------------------------------------------------------- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-12c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Oliver</span>
+              <span class="logo-tag">Car Rentals</span>
+            </div>
+          </a>
+          <p class="footer-desc">Premium car rentals and absolute transport coordinator services across Accra and neighboring cities. 19+ years of VIP mobility expertise.</p>
+          
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 2.25a.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75M12 7.5a4.5 4.5 0 0 1 4.5 4.5 4.5 4.5 0 0 1-4.5 4.5A4.5 4.5 0 0 1 7.5 12 4.5 4.5 0 0 1 12 7.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.31 1.83c-.35 0-.69-.02-1.02-.06C3.44 20.29 6.18 21 9.12 21 18.25 21 23.23 13.44 23.23 6.86V6.22c.97-.7 1.81-1.57 2.47-2.56z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-nav">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#hero">Home Base</a></li>
+            <li class="footer-link"><a href="#about">About Our Agency</a></li>
+            <li class="footer-link"><a href="#fleet">VIP Vehicle Fleet</a></li>
+            <li class="footer-link"><a href="#why-choose-us">Why Choose Us</a></li>
+            <li class="footer-link"><a href="#testimonials">Customer Reviews</a></li>
+            <li class="footer-link"><a href="#contact">Inquiry Desk</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact Info -->
+        <div class="footer-nav">
+          <h3 class="footer-title">Inquiries & Support</h3>
+          <ul class="footer-contact-details">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Sir Charles Quist St & Angola Ave, Accra, Ghana</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.01-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="tel:+233243208436">+233 24 320 8436</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="javascript:void(0)" onclick="handleGeneralWhatsAppInquiry('footer_mail')">oliverrentals@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <span class="copyright">© 2026 Oliver Car Rentals. All Rights Reserved. ACCRA, GHANA.</span>
+        
+        <a href="javascript:void(0)" class="footer-whatsapp-link" onclick="handleGeneralWhatsAppInquiry('footer_bottom')">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.012 2c-5.506 0-9.975 4.47-9.975 9.979 0 1.761.459 3.479 1.332 5.002L2 22l5.176-1.361c1.478.809 3.136 1.233 4.828 1.233 5.506 0 9.976-4.47 9.976-9.98S17.518 2 12.012 2zm6.277 14.193c-.273.767-1.361 1.4-1.879 1.488-.479.083-.996.143-3.14-.736-2.738-1.124-4.509-3.928-4.647-4.11-.137-.183-1.11-1.48-1.11-2.822 0-1.343.702-2.003.951-2.274.25-.272.546-.34.729-.34.182 0 .365.002.523.01.166.008.389-.063.608.463.226.541.776 1.895.843 2.03.067.137.112.296.022.476-.09.18-.135.295-.27.452-.136.157-.285.352-.408.472-.135.132-.277.276-.12.547.158.271.7 1.15 1.502 1.865.986.88 1.815 1.152 2.072 1.288.257.135.408.113.56-.062.152-.176.654-.763.829-1.022.176-.259.351-.215.592-.125.241.09 1.528.72 1.792.852.264.133.438.199.503.311.066.113.066.654-.207 1.421z"/>
+          </svg>
+          Reliable Rent-to-Drive WhatsApp Support
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- -------------------------------------------------------------
+       FLOATING ELEMENTS (WHATSAPP WIDGET)
+       ------------------------------------------------------------- -->
+  <a href="javascript:void(0)" class="floating-wa-btn" id="floatingWaBtn" onclick="handleGeneralWhatsAppInquiry('floating_widget')" aria-label="Chat VIP with Oliver Car Rentals on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.012 2c-5.506 0-9.975 4.47-9.975 9.979 0 1.761.459 3.479 1.332 5.002L2 22l5.176-1.361c1.478.809 3.136 1.233 4.828 1.233 5.506 0 9.976-4.47 9.976-9.98S17.518 2 12.012 2zm6.277 14.193c-.273.767-1.361 1.4-1.879 1.488-.479.083-.996.143-3.14-.736-2.738-1.124-4.509-3.928-4.647-4.11-.137-.183-1.11-1.48-1.11-2.822 0-1.343.702-2.003.951-2.274.25-.272.546-.34.729-.34.182 0 .365.002.523.01.166.008.389-.063.608.463.226.541.776 1.895.843 2.03.067.137.112.296.022.476-.09.18-.135.295-.27.452-.136.157-.285.352-.408.472-.135.132-.277.276-.12.547.158.271.7 1.15 1.502 1.865.986.88 1.815 1.152 2.072 1.288.257.135.408.113.56-.062.152-.176.654-.763.829-1.022.176-.259.351-.215.592-.125.241.09 1.528.72 1.792.852.264.133.438.199.503.311.066.113.066.654-.207 1.421z"/>
+    </svg>
+    <div class="wa-tooltip">Chat VIP Now</div>
+  </a>
+
+  <!-- -------------------------------------------------------------
+       JAVASCRIPT LOGIC
+       ------------------------------------------------------------- -->
+  <script>
+    // Constants
+    const WHATSAPP_PHONE_NUMBER = '233243208436'; // Standard wa.me formatting without special characters or pluses
+
+    // Sticky Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Hamburger Menu Navigation Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      // Hamburger animation to 'X'
+      menuToggle.classList.toggle('open');
+      const spans = menuToggle.querySelectorAll('span');
+      if (menuToggle.classList.contains('open')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    function closeMenu() {
+      navLinks.classList.remove('active');
+      menuToggle.classList.remove('open');
+      const spans = menuToggle.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+
+    // -------------------------------------------------------------
+    // VEHICLE DATA FOR FILTERABLE TABS
+    // -------------------------------------------------------------
+    
+    // Custom Vehicle Database Array
+    const vehiclesData = [
+      {
+        id: "toyota_v8",
+        name: "Toyota Land Cruiser V8",
+        category: "suv",
+        desc: "Accra's ultimate status SUV. Absolute VIP presence, armored-level robust build, and premium double-wishbone luxury ride.",
+        seats: "7 Seats",
+        engine: "V8 Turbo Diesel",
+        transmission: "Automatic",
+        feature: "Elite Luxury AC",
+        image: "https://i.pinimg.com/1200x/56/8f/89/568f89ee80c33c9f460d88d7ca48a6d5.jpg"
+      },
+      {
+        id: "toyota_prado",
+        name: "Toyota Land Cruiser Prado 2018",
+        category: "suv",
+        desc: "Sleek and versatile luxury 4x4. Excellent performance on rugged regional terrain, high-end seating, and powerful air climate controls.",
+        seats: "7 Seats",
+        engine: "Turbo Diesel",
+        transmission: "Automatic",
+        feature: "Dual Climate Zone",
+        image: "https://i.pinimg.com/736x/f0/b6/5f/f0b65fc2ccbe2e2551aac77b41949355.jpg"
+      },
+      {
+        id: "range_rover",
+        name: "Range Rover 2020",
+        category: "suv",
+        desc: "The pinnacle of British luxury motoring. Dynamic air suspension, panoramic VIP cabin, and imposing aesthetic perfect for high-profile arrivals.",
+        seats: "5 Seats",
+        engine: "Supercharged V6",
+        transmission: "Automatic",
+        feature: "Active Air Suspension",
+        image: "https://i.pinimg.com/1200x/19/93/96/1993965979adf66ce8a33b226ec34c08.jpg"
+      },
+      {
+        id: "cadillac_escalade",
+        name: "Cadillac Escalade",
+        category: "suv",
+        desc: "American presidential luxury. Huge cabin presence, hand-stitched leather lounge seating, and state-of-the-art rear passenger infotainment.",
+        seats: "7 Seats",
+        engine: "Premium V8 Petrol",
+        transmission: "Automatic",
+        feature: "Surround Premium Audio",
+        image: "https://i.pinimg.com/1200x/31/04/03/3104034cdc1820e6c58cdb44fd762b0e.jpg"
+      },
+      {
+        id: "toyota_fortuner",
+        name: "Toyota Fortuner",
+        category: "suv",
+        desc: "Highly dependable double-duty SUV. Strong off-road capability matched with clean urban aesthetics, perfect for corporate operations.",
+        seats: "7 Seats",
+        engine: "4x4 Capability",
+        transmission: "Automatic",
+        feature: "Heavy Duty AC",
+        image: "https://i.pinimg.com/1200x/ba/a4/9c/baa49cadc14ec6cffe3e0c246939cf6b.jpg"
+      },
+      {
+        id: "honda_crv",
+        name: "Honda CR-V",
+        category: "suv",
+        desc: "Refined, comfortable crossover. High fuel efficiency, smooth CVT drive, and sleek layout perfect for self-drive city navigation.",
+        seats: "5 Seats",
+        engine: "1.5L Turbo Petrol",
+        transmission: "Automatic",
+        feature: "Active Safety Sensing",
+        image: "https://i.pinimg.com/736x/5a/03/ba/5a03bad8ad2f82abf349bbf99655a245.jpg"
+      },
+      {
+        id: "hyundai_creta",
+        name: "Hyundai Creta",
+        category: "suv",
+        desc: "Smart, fuel-efficient compact SUV. Easy to park in tight Accra spaces, high visual clearance, and very responsive steering.",
+        seats: "5 Seats",
+        engine: "Highly Fuel Efficient",
+        transmission: "Automatic",
+        feature: "Panoramic Sunroof",
+        image: "https://i.pinimg.com/1200x/16/62/9b/16629bdbaa403b369e0d589a2ee41300.jpg"
+      },
+      {
+        id: "mercedes_eclass",
+        name: "Mercedes-Benz E-Class",
+        category: "sedan",
+        desc: "The absolute benchmark of executive corporate travel. Sumptuous rear leather, ambient mood lighting, and flawless VIP luxury styling.",
+        seats: "5 Seats",
+        engine: "Twin-Turbo Power",
+        transmission: "Automatic",
+        feature: "VIP Multi-Climate Zones",
+        image: "https://i.pinimg.com/736x/fd/d4/09/fdd409c058dfe02313c240ee311fa291.jpg"
+      },
+      {
+        id: "vw_passat",
+        name: "Volkswagen Passat",
+        category: "sedan",
+        desc: "Elegant German engineering. Highly ergonomic cockpit, superb highway stability, and quiet cabin insulation perfect for business meetings.",
+        seats: "5 Seats",
+        engine: "TSI Turbo Engine",
+        transmission: "Automatic",
+        feature: "Rear Climate Venting",
+        image: "https://i.pinimg.com/736x/ab/ce/10/abce102e26c8c1c45623990eb40a6180.jpg"
+      },
+      {
+        id: "hyundai_sonata",
+        name: "Hyundai Sonata 2020",
+        category: "sedan",
+        desc: "Futuristic fastback styling. Striking LED light signatures, modern touch displays, and smooth, eco-friendly highway running.",
+        seats: "5 Seats",
+        engine: "Smart Drive Select",
+        transmission: "Automatic",
+        feature: "Surround Monitor",
+        image: "https://i.pinimg.com/1200x/3c/5d/61/3c5d6162fe362461d1225a5aa6c779b8.jpg"
+      },
+      {
+        id: "honda_accord",
+        name: "Honda Accord",
+        category: "sedan",
+        desc: "Sporty yet executive sedan. Spacious rear legroom matching larger luxury classes, with top-tier active driver safety systems.",
+        seats: "5 Seats",
+        engine: "2.0L Turbo Power",
+        transmission: "Automatic",
+        feature: "Leather Lounge Trim",
+        image: "https://i.pinimg.com/736x/a0/be/54/a0be549aab14e653dd1599859dfb82eb.jpg"
+      },
+      {
+        id: "toyota_coaster",
+        name: "Toyota Coaster",
+        category: "bus",
+        desc: "Sizable high-capacity VIP shuttle coach. Powerful under-floor air conditioning, plush high-back passenger seats, and broad luggage bays.",
+        seats: "30 Seats",
+        engine: "Dedicated Driver",
+        transmission: "Manual / Auto",
+        feature: "Heavy Duty AC System",
+        image: "https://i.pinimg.com/736x/aa/3f/6b/aa3f6b842e53e686bc1ccead2a105578.jpg"
+      },
+      {
+        id: "toyota_hiace",
+        name: "Toyota HiAce 2026",
+        category: "bus",
+        desc: "The absolute latest in group travel luxury. Sleek high-roof van layout, dual climate blowers, and individual reclining business seats.",
+        seats: "15 Seats",
+        engine: "USB Charging Ports",
+        transmission: "Automatic",
+        feature: "Eco-Diesel Engine",
+        image: "https://i.pinimg.com/736x/d3/a5/15/d3a51501a51d184c8402d5bcbf05b1f3.jpg"
+      },
+      {
+        id: "hyundai_taxi",
+        name: "Hyundai Taxi 2018",
+        category: "economy",
+        desc: "Ultra-affordable Accra city running. Reliable, simple taxi setup, highly fuel-efficient, and ideal for standard daily running.",
+        seats: "5 Seats",
+        engine: "Fuel Efficient",
+        transmission: "Manual / Auto",
+        feature: "Standard Air Climate",
+        image: "https://i.pinimg.com/736x/a0/46/e1/a046e176244d4908c62b571bd36ed055.jpg"
+      },
+      {
+        id: "toyota_hilux",
+        name: "Toyota Hilux",
+        category: "suv",
+        desc: "Accra's ultimate double-cabin workhorse. High ground clearance, immense payload strength, and premium air-conditioned passenger comfort.",
+        seats: "5 Seats",
+        engine: "4x4 Turbo Diesel",
+        transmission: "Manual / Auto",
+        feature: "Heavy Cargo Capacity",
+        image: "https://i.pinimg.com/736x/0b/82/22/0b82223f064292be7cf5d939f555993b.jpg"
+      },
+      {
+        id: "mitsubishi_l200",
+        name: "Mitsubishi L200 Sportero",
+        category: "suv",
+        desc: "Dynamic styling meets raw pickup durability. Premium sport leather cabin, aggressive road posture, and highly responsive 4WD select control.",
+        seats: "5 Seats",
+        engine: "2.4L MIVEC Diesel",
+        transmission: "Automatic",
+        feature: "Sport Styling Pack",
+        image: "https://i.pinimg.com/736x/70/92/c5/7092c58778fef67c5b8722b43f3031f4.jpg"
+      },
+      {
+        id: "mercedes_g63",
+        name: "Mercedes-Benz G-Class (G63 AMG)",
+        category: "suv",
+        desc: "The absolute peak of elite VIP motoring. Timeless military boxy silhouette, roaring twin-turbo AMG engine, and handcrafted active exhaust ride.",
+        seats: "5 Seats",
+        engine: "Bi-Turbo V8 AMG",
+        transmission: "Automatic",
+        feature: "Handcrafted AMG Trim",
+        image: "https://i.pinimg.com/736x/21/57/0b/21570b1bfd2e4ef7413fdc5a524a1661.jpg"
+      },
+      {
+        id: "toyota_lc300",
+        name: "Toyota Land Cruiser LC300",
+        category: "suv",
+        desc: "Toyota's latest luxury off-road flagship. Twin-turbocharged V6 power, adaptive terrain response suspension, and premium executive ventilation.",
+        seats: "7 Seats",
+        engine: "Twin-Turbo V6",
+        transmission: "Automatic",
+        feature: "Flagship Luxury Comfort",
+        image: "https://i.pinimg.com/1200x/1f/c1/c9/1fc1c928078da5e7a3e2847b260ea9c6.jpg"
+      },
+      {
+        id: "range_rover_velar",
+        name: "Range Rover Velar or Sport",
+        category: "suv",
+        desc: "Avant-garde luxury and sleek minimalism. Flush deployable door handles, state-of-the-art dual touchscreens, and a whisper-quiet ride.",
+        seats: "5 Seats",
+        engine: "Premium Active Ride",
+        transmission: "Automatic",
+        feature: "Premium Leather Cabin",
+        image: "https://i.pinimg.com/1200x/16/17/aa/1617aaab981a638be0f115cc52a871b0.jpg"
+      },
+      {
+        id: "toyota_corolla",
+        name: "Toyota Corolla",
+        category: "sedan",
+        desc: "The global benchmark for efficiency and reliability. Extremely fuel-efficient engine, robust AC cooling, and highly ergonomic seating ideal for navigating Accra.",
+        seats: "5 Seats",
+        engine: "VVTi Engine",
+        transmission: "Automatic",
+        feature: "Highly Economical",
+        image: "https://i.pinimg.com/1200x/d5/ba/16/d5ba16080fa95d69970734bb77377ec7.jpg"
+      },
+      {
+        id: "suzuki_spresso",
+        name: "Suzuki S-Presso",
+        category: "economy",
+        desc: "Compact, funky, and ultra-affordable mini-SUV styling. Outstanding fuel efficiency, elevated driving view, and compact footprint perfect for tight city lanes.",
+        seats: "5 Seats",
+        engine: "1.0L K-Next Engine",
+        transmission: "Manual / Auto",
+        feature: "Ultra High MPG",
+        image: "https://i.pinimg.com/736x/b7/ac/a2/b7aca27c2c2d71d29ec1710ac17ed87f.jpg"
+      },
+      {
+        id: "toyota_yaris",
+        name: "Toyota Yaris",
+        category: "economy",
+        desc: "Sleek, responsive, and extremely fuel-efficient city hatchback. The ideal self-drive choice for practical daily running in Accra.",
+        seats: "5 Seats",
+        engine: "1.5L Dual VVTi",
+        transmission: "Automatic",
+        feature: "Highly Fuel Efficient",
+        image: "https://i.pinimg.com/736x/0e/51/4b/0e514b7418a5da99c74fc78dee8a0829.jpg"
+      },
+      {
+        id: "vw_polo",
+        name: "Volkswagen Polo",
+        category: "economy",
+        desc: "Premium German subcompact. Exceptional build quality, responsive handling, and tight turning radius perfect for narrow city streets.",
+        seats: "5 Seats",
+        engine: "1.4L TSI Engine",
+        transmission: "Automatic",
+        feature: "Ergonomic Sport Seats",
+        image: "https://i.pinimg.com/1200x/b8/02/ef/b802efc2cd7f7055d2a6cd87bc60e764.jpg"
+      },
+      {
+        id: "renault_clio",
+        name: "Renault Clio",
+        category: "economy",
+        desc: "Stylish French supermini. Exceptional fuel economy combined with elegant chic looks and premium interior materials.",
+        seats: "5 Seats",
+        engine: "1.0L Turbocharged",
+        transmission: "Manual / Auto",
+        feature: "Premium Audio Sound",
+        image: "https://i.pinimg.com/736x/80/77/03/8077032657a1fff40649d437fd96e5e3.jpg"
+      },
+      {
+        id: "vw_golf",
+        name: "Volkswagen Golf",
+        category: "economy",
+        desc: "The undisputed benchmark for premium hatchbacks. Unbelievable cabin space, smooth ride insulation, and superb fuel efficiency.",
+        seats: "5 Seats",
+        engine: "1.8L TSI Turbo",
+        transmission: "Automatic",
+        feature: "Advanced Digital Cockpit",
+        image: "https://i.pinimg.com/1200x/e6/46/1f/e6461ffe2673f0823a6a9a49912bfdb3.jpg"
+      },
+      {
+        id: "nissan_qashqai",
+        name: "Nissan Qashqai",
+        category: "suv",
+        desc: "Sleek European styling crossover. Spacious elevated seating, excellent all-round visibility, and responsive active safety sensors.",
+        seats: "5 Seats",
+        engine: "1.3L Turbo Petrol",
+        transmission: "Automatic",
+        feature: "Panoramic Glass Roof",
+        image: "https://i.pinimg.com/736x/78/c2/86/78c2862b328531b211c74a92e54306a6.jpg"
+      },
+      {
+        id: "kia_sportage",
+        name: "Kia Sportage",
+        category: "suv",
+        desc: "Striking, futuristic design crossover. Large panoramic display screen, extremely smooth ride quality, and dynamic driving modes.",
+        seats: "5 Seats",
+        engine: "2.0L MPI Engine",
+        transmission: "Automatic",
+        feature: "Smart Power Tailgate",
+        image: "https://i.pinimg.com/1200x/2c/01/a7/2c01a71dd1eaf3fbc12d8321e0a84caa.jpg"
+      },
+      {
+        id: "toyota_rav4",
+        name: "Toyota RAV4",
+        category: "suv",
+        desc: "Accra's favorite premium utility crossover. Exceptional ground clearance, spacious cargo bay, and legendary reliability.",
+        seats: "5 Seats",
+        engine: "2.5L 4-Cylinder",
+        transmission: "Automatic",
+        feature: "All-Wheel Drive System",
+        image: "https://i.pinimg.com/736x/fd/19/d8/fd19d8c69dd411a0da83d98490738e8f.jpg"
+      },
+      {
+        id: "audi_q5",
+        name: "Audi Q5",
+        category: "suv",
+        desc: "Prestige German luxury SUV. Quattro permanent all-wheel drive, premium leather seats, and impeccable ride comfort for executive clients.",
+        seats: "5 Seats",
+        engine: "2.0L TFSI Turbo",
+        transmission: "Automatic",
+        feature: "Virtual Cockpit / Quattro",
+        image: "https://i.pinimg.com/736x/8b/89/ee/8b89eeac649484e4580c81e9cddb723b.jpg"
+      }
+    ];
+
+    // Dynamically render vehicles grid based on filter
+    function renderFleetGrid(filter = 'all') {
+      const grid = document.getElementById('fleetGrid');
+      if (!grid) return;
+      
+      grid.innerHTML = ''; // Reset Grid
+      
+      const filteredVehicles = vehiclesData.filter(v => filter === 'all' || v.category === filter);
+      
+      filteredVehicles.forEach(v => {
+        const cardHTML = `
+          <div class="fleet-card" data-category="${v.category}" style="opacity: 0; transform: translateY(10px); transition: all 0.4s ease;">
+            <div class="fleet-img-container">
+              <div class="fleet-img-placeholder">
+                <img src="${v.image}" alt="${v.name}">
+                <div class="fleet-img-overlay">
+                  <span class="fleet-category-badge">${v.category === 'suv' ? 'SUV / 4x4' : v.category === 'sedan' ? 'Executive Sedan' : v.category === 'bus' ? 'Van & Bus' : 'Economy / Taxi'}</span>
+                </div>
+              </div>
+            </div>
+            <div class="fleet-card-body">
+              <h3 class="fleet-title">${v.name}</h3>
+              <p class="fleet-desc">${v.desc}</p>
+              <ul class="fleet-specs">
+                <li class="fleet-spec-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  ${v.seats}
+                </li>
+                <li class="fleet-spec-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  ${v.engine}
+                </li>
+                <li class="fleet-spec-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  ${v.transmission}
+                </li>
+                <li class="fleet-spec-item">
+                  <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  ${v.feature}
+                </li>
+              </ul>
+              <a href="javascript:void(0)" class="btn btn-gold fleet-cta" onclick="handleVehicleWhatsAppInquiry('${v.name}')">Inquire on WhatsApp</a>
+            </div>
+          </div>
+        `;
+        
+        grid.insertAdjacentHTML('beforeend', cardHTML);
+      });
+      
+      // Animate cards entry
+      setTimeout(() => {
+        const cards = grid.querySelectorAll('.fleet-card');
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, index * 40);
+        });
+      }, 50);
+    }
+
+    // Tab Filter Actions
+    const fleetTabs = document.querySelectorAll('.fleet-tab');
+    fleetTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        fleetTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const filter = tab.getAttribute('data-filter');
+        renderFleetGrid(filter);
+      });
+    });
+
+    // -------------------------------------------------------------
+    // WHATSAPP URL GENERATION & INTEGRATION
+    // -------------------------------------------------------------
+    
+    // 1. General WhatsApp Greetings (Header, Hero, Floating Buttons, Footer)
+    function handleGeneralWhatsAppInquiry(source) {
+      let greeting = "Hello Oliver Car Rentals, I'm visiting your website and I'm interested in booking a VIP ride. Please assist me with availability and rates.";
+      
+      if (source === 'header') {
+        greeting = "Hello Oliver Car Rentals, I would like to book a premium car rental from the website header desk. Please guide me.";
+      } else if (source === 'hero_vip') {
+        greeting = "Hello Oliver Car Rentals, I would like to book a VIP rental ride via WhatsApp right now. Please assist me with the fleet options.";
+      } else if (source === 'floating_widget') {
+        greeting = "Hello Oliver Car Rentals, I have a quick inquiry regarding your available car rentals in Accra. Can we chat?";
+      } else if (source === 'footer_mail' || source === 'footer_bottom') {
+        greeting = "Hello Oliver Car Rentals, I'm checking out your site footer details and would like to coordinate a rental car service.";
+      } else if (source === 'custom_fleet_request') {
+        greeting = "Hello Oliver Car Rentals, I have a special vehicle request. Can you supply a custom car type for me in Accra?";
+      } else if (source === 'contact_form_chat') {
+        greeting = "Hello Oliver Car Rentals, I'm filling out the contact details and would like to directly chat with an agent regarding rental plans.";
+      }
+
+      openWhatsAppChat(greeting);
+    }
+
+    // 2. Specific Vehicle Fleet Inquiries
+    function handleVehicleWhatsAppInquiry(vehicleClass) {
+      const greeting = `Hello Oliver Car Rentals, I am highly interested in inquiring about your "${vehicleClass}" vehicle fleet options. Please provide information on rates, structural policies, and general availability in Accra.`;
+      openWhatsAppChat(greeting);
+    }
+
+    // 3. Complete Contact Form Submission WhatsApp Compiler
+    const bookingForm = document.getElementById('whatsappBookingForm');
+    
+    bookingForm.addEventListener('submit', function (event) {
+      event.preventDefault(); // Halt normal submission
+      
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const rawPickup = document.getElementById('pickupDate').value;
+      const rawReturn = document.getElementById('returnDate').value;
+      const vehicle = document.getElementById('vehicleType').value;
+      const additionalMsg = document.getElementById('clientMessage').value.trim();
+
+      // Simple logical date verification
+      const pickupDateObj = new Date(rawPickup);
+      const returnDateObj = new Date(rawReturn);
+      const currentDateObj = new Date();
+
+      if (pickupDateObj < currentDateObj && (pickupDateObj.toDateString() !== currentDateObj.toDateString())) {
+        alert("Attention: The pickup date cannot be in the past. Please select a valid upcoming date.");
+        return;
+      }
+
+      if (returnDateObj <= pickupDateObj) {
+        alert("Attention: The return date must be strictly after your selected pickup date.");
+        return;
+      }
+
+      // Format dates into readable localized strings
+      const dateOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+      const formattedPickup = pickupDateObj.toLocaleDateString('en-US', dateOptions);
+      const formattedReturn = returnDateObj.toLocaleDateString('en-US', dateOptions);
+
+      // Construct a highly structured, premium WhatsApp booking request
+      let message = `Hello Oliver Car Rentals, I'm interested in renting a car.\n\n`;
+      message += `📋 *RENTAL BOOKING DETAILS*\n`;
+      message += `• *Name:* ${name}\n`;
+      message += `• *Phone:* ${phone}\n`;
+      message += `• *Vehicle Type:* ${vehicle}\n`;
+      message += `• *Pickup Date:* ${formattedPickup}\n`;
+      message += `• *Return Date:* ${formattedReturn}\n`;
+      
+      if (additionalMsg) {
+        message += `\n💬 *Additional Notes & Special Requests:*\n${additionalMsg}`;
+      } else {
+        message += `\n💬 *Additional Notes:* None.`;
+      }
+
+      openWhatsAppChat(message);
+    });
+
+    // Helper: Build URL and trigger redirection safely
+    function openWhatsAppChat(messageText) {
+      const encodedText = encodeURIComponent(messageText);
+      const whatsappURL = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodedText}`;
+      window.open(whatsappURL, '_blank');
+    }
+
+    // -------------------------------------------------------------
+    // LIVE STATUS HOURS CALCULATOR
+    // -------------------------------------------------------------
+    
+    function renderLiveBusinessStatus() {
+      const container = document.getElementById('liveStatusContainer');
+      if (!container) return;
+
+      // Accra is at GMT/UTC+0 timezone
+      const now = new Date();
+      const currentDay = now.getUTCDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const currentHour = now.getUTCHours(); 
+
+      let isOpen = true;
+      let statusHTML = '';
+
+      if (currentDay === 0) {
+        isOpen = false;
+      } else {
+        isOpen = true;
+      }
+
+      if (isOpen) {
+        statusHTML = `
+          <div class="status-badge status-open">
+            <span class="status-dot"></span>
+            WE ARE OPEN NOW (24/7 Support)
+          </div>
+        `;
+      } else {
+        statusHTML = `
+          <div class="status-badge status-closed">
+            <span class="status-dot"></span>
+            WE ARE CLOSED TODAY (Resumes Mon 24/7)
+          </div>
+        `;
+      }
+
+      container.innerHTML = statusHTML;
+    }
+
+    // Initialize Page states
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initial Render of All vehicles
+      renderFleetGrid('all');
+
+      // 2. Render Business Hours
+      renderLiveBusinessStatus();
+      setInterval(renderLiveBusinessStatus, 60000);
+
+      // 3. Pre-set default dates (Pickup today in +2 hours, return in 3 days)
+      const now = new Date();
+      now.setHours(now.getHours() + 2);
+      now.setMinutes(0);
+      
+      const pickupInput = document.getElementById('pickupDate');
+      const returnInput = document.getElementById('returnDate');
+
+      if (pickupInput && returnInput) {
+        const pad = (num) => String(num).padStart(2, '0');
+        const formatLocalISO = (date) => {
+          return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+        };
+        
+        pickupInput.value = formatLocalISO(now);
+        
+        const returnDate = new Date(now);
+        returnDate.setDate(returnDate.getDate() + 3);
+        returnInput.value = formatLocalISO(returnDate);
+      }
+    });
+  </script>
+</body>
+</html>
