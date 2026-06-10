@@ -172,6 +172,11 @@ function renderLiveBusinessStatus() {
 
 // Initialize Page states
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach((img) => {
+    if (!img.hasAttribute('loading')) img.loading = 'lazy';
+    if (!img.hasAttribute('decoding')) img.decoding = 'async';
+  });
+
   renderLiveBusinessStatus();
 
   // Refresh business hours calculator every 60 seconds
