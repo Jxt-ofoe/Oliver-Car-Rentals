@@ -1330,6 +1330,271 @@
     }
 
     /* -------------------------------------------------------------
+       6.5. INTERACTIVE PHOTO GALLERY SECTION
+       ------------------------------------------------------------- */
+    #gallery {
+      padding: 120px 0;
+      background-color: var(--bg-primary);
+    }
+
+    .gallery-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-tab {
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      outline: none;
+    }
+
+    .gallery-tab:hover, .gallery-tab.active {
+      background-color: var(--accent-gold);
+      color: var(--bg-primary);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 15px rgba(var(--accent-gold-rgb), 0.4);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      transition: all 0.5s ease;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all var(--transition-speed) ease;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    .gallery-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-speed) ease;
+    }
+
+    .gallery-item-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.4) 60%, rgba(18, 18, 18, 0.1) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity var(--transition-speed) ease;
+      z-index: 2;
+    }
+
+    .gallery-item:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item-tag {
+      align-self: flex-start;
+      background: rgba(var(--accent-gold-rgb), 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .gallery-item-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .gallery-item-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* Lightbox Modal Styles */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-speed) ease;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      color: var(--text-primary);
+      font-size: 2.5rem;
+      cursor: pointer;
+      transition: color var(--transition-speed) ease;
+      z-index: 2010;
+      line-height: 1;
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent-gold);
+    }
+
+    .lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(26, 26, 26, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
+      font-size: 2.2rem;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-speed) ease;
+      z-index: 2010;
+      outline: none;
+      user-select: none;
+    }
+
+    .lightbox-arrow:hover {
+      background: var(--accent-gold);
+      color: var(--bg-primary);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 15px rgba(var(--accent-gold-rgb), 0.4);
+    }
+
+    .lightbox-prev {
+      left: 30px;
+    }
+
+    .lightbox-next {
+      right: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .lightbox-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 1.8rem;
+      }
+      .lightbox-prev {
+        left: 15px;
+      }
+      .lightbox-next {
+        right: 15px;
+      }
+    }
+
+    .lightbox-content-wrapper {
+      max-width: 85%;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .lightbox-content {
+      max-width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lightbox-caption {
+      color: var(--text-primary);
+      font-family: 'Outfit', sans-serif;
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* -------------------------------------------------------------
        11. FLOATING ELEMENTS
        ------------------------------------------------------------- */
     .floating-wa-btn {
@@ -1567,6 +1832,7 @@
         <a href="cheap-car-hire-legon.html" class="nav-link" onclick="closeMenu()">Legon Hire</a>
         <a href="airport-car-rental-ghana.html" class="nav-link" onclick="closeMenu()">Airport Rentals</a>
         <a href="#fleet" class="nav-link" onclick="closeMenu()">Fleet</a>
+        <a href="#gallery" class="nav-link" onclick="closeMenu()">Gallery</a>
         <a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a>
         <a href="javascript:void(0)" class="btn btn-gold btn-header-cta" onclick="handleGeneralWhatsAppInquiry('header'); closeMenu()">Book VIP</a>
       </nav>
@@ -2237,6 +2503,33 @@
   </section>
 
   <!-- -------------------------------------------------------------
+       INTERACTIVE PHOTO GALLERY SECTION
+       ------------------------------------------------------------- -->
+  <section id="gallery">
+    <div class="container">
+      <div class="center-title-wrapper" style="text-align: center; margin-bottom: 50px;">
+        <span class="badge">Visual Tour</span>
+        <h2 class="section-title" style="margin-top: 10px;">Oliver Car Rentals in Action</h2>
+        <p class="section-subtitle" style="margin-bottom: 0;">Real moments from our VIP airport transfers, luxury wedding escorts, corporate transport, and scenic tours across Ghana.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-tabs">
+        <button class="gallery-tab active" data-gallery-filter="all">All Photos</button>
+        <button class="gallery-tab" data-gallery-filter="airport">Airport Transfers</button>
+        <button class="gallery-tab" data-gallery-filter="wedding">Wedding Drives</button>
+        <button class="gallery-tab" data-gallery-filter="corporate">Business Travel</button>
+        <button class="gallery-tab" data-gallery-filter="tours">Ghana Tours</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------
        WHY CHOOSE US SECTION
        ------------------------------------------------------------- -->
   <section id="why-choose-us">
@@ -2606,6 +2899,17 @@
     </svg>
     <div class="wa-tooltip">Chat VIP Now</div>
   </a>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <span class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</span>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous Image">&#8249;</button>
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next Image">&#8250;</button>
+    <div class="lightbox-content-wrapper">
+      <img class="lightbox-content" id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
   <!-- -------------------------------------------------------------
        JAVASCRIPT LOGIC
@@ -3304,6 +3608,186 @@
       container.innerHTML = statusHTML;
     }
 
+    // -------------------------------------------------------------
+    // PHOTO GALLERY DATA & LIGHTBOX LOGIC
+    // -------------------------------------------------------------
+    const galleryData = [
+      {
+        id: "gal_1",
+        category: "airport",
+        title: "VIP Airport Transfer",
+        desc: "Toyota Land Cruiser V8 waiting at Kotoka International Airport (KIA), Accra.",
+        image: "https://images.unsplash.com/photo-1542362567-b07eac790acd?auto=format&fit=crop&q=80&w=800",
+        alt: "Toyota Land Cruiser V8 waiting at airport terminal for VVIP transfer"
+      },
+      {
+        id: "gal_2",
+        category: "wedding",
+        title: "Bridal Escort Convoy",
+        desc: "Decorated premium white SUVs prepared for a bridal ceremony in Accra.",
+        image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800",
+        alt: "Decorated premium white wedding SUVs lining up for bridal convoy"
+      },
+      {
+        id: "gal_3",
+        category: "corporate",
+        title: "Executive Chauffeur Drive",
+        desc: "Mercedes-Benz E-Class providing business travel coordination for delegates.",
+        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800",
+        alt: "Mercedes Benz E Class executive chauffeur service driving business delegate"
+      },
+      {
+        id: "gal_4",
+        category: "tours",
+        title: "Scenic Akosombo Tour",
+        desc: "Toyota Land Cruiser Prado exploring Volta Region landscapes.",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
+        alt: "Toyota Land Cruiser Prado SUV driving on scenic winding road in nature"
+      },
+      {
+        id: "gal_5",
+        category: "airport",
+        title: "Accra Airport VVIP Lounge",
+        desc: "Black Mercedes-Benz E-Class parked outside KIA Terminal 3 VIP wing.",
+        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800",
+        alt: "Black Mercedes Benz E-Class parked outside airport terminal"
+      },
+      {
+        id: "gal_6",
+        category: "wedding",
+        title: "Mercedes G63 Wedding Convoy",
+        desc: "Our VVIP black G-Wagon prepared for an executive wedding drive.",
+        image: "https://images.unsplash.com/photo-1520050206274-a1ae446cb3cc?auto=format&fit=crop&q=80&w=800",
+        alt: "Matte black Mercedes G-Wagon G63 AMG decorated for wedding"
+      },
+      {
+        id: "gal_7",
+        category: "corporate",
+        title: "Diplomatic SUV Convoy",
+        desc: "Lined up black premium SUVs for a corporate conference transfer.",
+        image: "https://images.unsplash.com/photo-1606016159991-dfe4f974be5c?auto=format&fit=crop&q=80&w=800",
+        alt: "Diplomatic convoy of black luxury SUVs in Accra"
+      },
+      {
+        id: "gal_8",
+        category: "tours",
+        title: "Ghana Off-Road Safari",
+        desc: "Toyota Hilux double-cabin 4x4 pickup on tour in Shai Hills Reserve.",
+        image: "https://images.unsplash.com/photo-1617469767053-d3b508a0d84e?auto=format&fit=crop&q=80&w=800",
+        alt: "Toyota Hilux double-cabin pickup parked on dirt road in savanna forest"
+      }
+    ];
+
+    let currentFilteredGallery = [...galleryData];
+    let activeLightboxIndex = 0;
+
+    function renderGalleryGrid(filter = 'all') {
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+
+      grid.innerHTML = '';
+      currentFilteredGallery = galleryData.filter(item => filter === 'all' || item.category === filter);
+
+      currentFilteredGallery.forEach((item, index) => {
+        const itemHTML = `
+          <div class="gallery-item" data-category="${item.category}" onclick="openLightbox(${index})">
+            <img src="${item.image}" alt="${item.alt}" loading="lazy" decoding="async">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">${item.category === 'airport' ? 'Airport' : item.category === 'wedding' ? 'Wedding' : item.category === 'corporate' ? 'Business' : 'Tour'}</span>
+              <h3 class="gallery-item-title">${item.title}</h3>
+              <p class="gallery-item-desc">${item.desc}</p>
+            </div>
+          </div>
+        `;
+        grid.insertAdjacentHTML('beforeend', itemHTML);
+      });
+
+      // Animate items entry
+      setTimeout(() => {
+        const items = grid.querySelectorAll('.gallery-item');
+        items.forEach((item, idx) => {
+          setTimeout(() => {
+            item.classList.add('visible');
+          }, idx * 40);
+        });
+      }, 50);
+    }
+
+    function initPhotoGallery() {
+      // 1. Initial Render
+      renderGalleryGrid('all');
+
+      // 2. Filter tabs click events
+      const galleryTabs = document.querySelectorAll('.gallery-tab');
+      galleryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          galleryTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const filter = tab.getAttribute('data-gallery-filter');
+          renderGalleryGrid(filter);
+        });
+      });
+
+      // 3. Lightbox Close, Prev, Next buttons
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      document.getElementById('lightboxPrev').addEventListener('click', prevLightboxImage);
+      document.getElementById('lightboxNext').addEventListener('click', nextLightboxImage);
+
+      // Close on clicking outside the image
+      document.getElementById('lightboxModal').addEventListener('click', (e) => {
+        if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-content-wrapper')) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard support
+      document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('lightboxModal');
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevLightboxImage();
+        if (e.key === 'ArrowRight') nextLightboxImage();
+      });
+    }
+
+    function openLightbox(index) {
+      activeLightboxIndex = index;
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const caption = document.getElementById('lightboxCaption');
+      
+      const item = currentFilteredGallery[index];
+      if (!item) return;
+
+      img.src = item.image;
+      img.alt = item.alt;
+      caption.innerHTML = `<strong>${item.title}</strong> — ${item.desc}`;
+      
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Stop scrolling
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // Resume scrolling
+    }
+
+    function prevLightboxImage() {
+      let prevIndex = activeLightboxIndex - 1;
+      if (prevIndex < 0) prevIndex = currentFilteredGallery.length - 1;
+      openLightbox(prevIndex);
+    }
+
+    function nextLightboxImage() {
+      let nextIndex = activeLightboxIndex + 1;
+      if (nextIndex >= currentFilteredGallery.length) nextIndex = 0;
+      openLightbox(nextIndex);
+    }
+
     // Initialize Page states
     document.addEventListener('DOMContentLoaded', () => {
       // 1. Initial Render of All vehicles
@@ -3312,6 +3796,9 @@
       // 2. Render Business Hours
       renderLiveBusinessStatus();
       setInterval(renderLiveBusinessStatus, 60000);
+
+      // 3. Initialize Photo Gallery
+      initPhotoGallery();
 
       // 3. Pre-set default dates (Pickup today in +2 hours, return in 3 days)
       const now = new Date();
